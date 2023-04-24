@@ -1,5 +1,12 @@
 function CostItem() {
-    return <h2>Элемент Расхода</h2>
+    return
+    <div>
+        <div>Date</div>
+        <div>
+          <h2>Title</h2>
+          <div>$999.99</div>
+        </div>
+    </div>;
 }
 
 export default CostItem;
