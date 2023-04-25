@@ -1,12 +1,16 @@
+import './CostItem.css';
+
 function CostItem() {
-    return
-    <div>
-        <div>Date</div>
-        <div>
-          <h2>Title</h2>
-          <div>$999.99</div>
-        </div>
-    </div>;
+    return (
+    <div className='cost-item'>
+               <div>2023</div>
+               <div className='cost-item__description'>
+              <h2>Холодильник</h2>
+              <div className='cost-item__price'>$999.99</div>
+            </div>
+         </div>
+    );
+
 }
 
 export default CostItem;
