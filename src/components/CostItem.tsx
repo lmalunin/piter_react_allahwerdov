@@ -1,21 +1,10 @@
 import './CostItem.css';
+import CostDate from "./CostDate";
 
-function CostItem(props) {
-
-
-    const month = props.date.toLocaleString('ru_RU',
-    {month: 'long'});
-    const year = props.date.getFullYear();
-    const day = props.date.toLocaleString('ru_RU',
-    {month: '2-digits'});
-
+function CostItem(props:any) {
     return (
     <div className='cost-item'>
-            <div>
-               <div>{month}</div>
-               <div>{year}</div>
-               <div>{day}</div>
-            </div>
+            <CostDate date={props.date}/>
             <div className='cost-item__description'>
               <h2>{props.description}</h2>
               <div className='cost-item__price'>${props.amount}</div>
