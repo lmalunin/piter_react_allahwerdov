@@ -20,6 +20,14 @@ function App() {
        },
     ];
 
+  // return React.createElement(
+ //  "div",
+  //   {},
+   //  React.createElement("h1", {}, "Начнем изучение React!"),
+   //  React.createElement(Costs, { costs: costs })
+  // );
+
+
   return (
     <div>
         <h1>Начнем изучение React!</h1>
