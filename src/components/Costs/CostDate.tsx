@@ -1,6 +1,6 @@
 import './CostDate.css';
 
-function CostDate(props:any) {
+const CostDate = (props:any) => {
     const month = props.date?.toLocaleString('ru-RU',
     {month: 'long'});
     const year = props.date?.getFullYear();

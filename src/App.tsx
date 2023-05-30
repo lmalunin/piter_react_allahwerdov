@@ -1,7 +1,7 @@
 // import React from "react";
 import Costs from "./components/Costs/Costs";
 
-function App() {
+const App = () => {
     const costs = [
        {
          date: new Date(2021, 2, 12),
