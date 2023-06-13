@@ -5,12 +5,14 @@ import React, { useState } from "react";
 
 const CostItem = (props:any) => {
 
-    const [description, setDescription] = useState(props.description);
+    const [description, setDescription] = useState
+    (props.description);
+    console.log('Text in component definition')
 
     const changeDescriptionHandler = () => {
        setDescription("New cost");
        console.log(description);
-    }
+    };
     return (
     <Card className='cost-item'>
             <CostDate date={props.date}/>
