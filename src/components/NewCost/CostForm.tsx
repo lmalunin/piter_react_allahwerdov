@@ -1,11 +1,16 @@
 import './CostForm.css';
 
 const CostForm = () => {
-     return <form>
+        const nameChangeHandler = (event:any) => {
+            console.log(event.target.value);
+        };
+
+     return (
+     <form>
         <div className="new-cost__controls">
             <div className="new-cost__control">
                 <label>Название</label>
-                <input type='text' />
+                <input type='text' onChange={nameChangeHandler}/>
             </div>
             <div className="new-cost__control">
                 <label>Сумма</label>
@@ -20,6 +25,7 @@ const CostForm = () => {
             </div>
         </div>
      </form>
+     )
 }
 
 export default CostForm;
