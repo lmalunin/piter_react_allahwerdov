@@ -7,7 +7,7 @@ const CostForm = () => {
         const [amount, setAmount] = useState('');
         const [date, setDate] = useState('');
 
-  //    const [userInput, setUserInput] =useState({
+  //    const [userInput, setUserInput] = useState({
    //     name: '',
    //     amount: '',
    //     date: ''
