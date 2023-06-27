@@ -3,9 +3,9 @@ import './CostForm.css';
 
 const CostForm = () => {
 
-        const [name, setName] = useState('');
-        const [amount, setAmount] = useState('');
-        const [date, setDate] = useState('');
+        const [inputName, setName] = useState('');
+        const [inputAmount, setAmount] = useState('');
+        const [inputDate, setDate] = useState('');
 
   //    const [userInput, setUserInput] = useState({
    //     name: '',
@@ -44,8 +44,18 @@ const CostForm = () => {
          //  })
         };
 
+        const submitHandler = (event) => {
+            event.preventDefault();
+
+            const costDate = {
+             name: inputName,
+             amount: inputAmount,
+             date: new Date(inputDate)
+            };
+        };
+
      return (
-     <form>
+     <form onSubmit={submitHandler}>
         <div className="new-cost__controls">
             <div className="new-cost__control">
                 <label>Название</label>
