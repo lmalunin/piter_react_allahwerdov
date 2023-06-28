@@ -29,10 +29,14 @@ const App = () => {
    //  React.createElement(Costs, { costs: costs })
   // );
 
+  const addCostHandler = (cost:any) => {
+      console.log(cost);
+      console.log('App Component');
+  }
 
   return (
     <div>
-        <NewCost />
+        <NewCost onAddCost={addCostHandler} />
         <Costs costs={costs}/>
     </div>
   );
