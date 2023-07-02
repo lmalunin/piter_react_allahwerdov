@@ -1,9 +1,8 @@
-// import React from "react";
+import React, {useState} from "react";
 import NewCost from "./components/NewCost/NewCost";
 import Costs from "./components/Costs/Costs";
 
-const App = () => {
-    const costs = [
+    const INITIAL_COSTS = [
        {
          id: "c1",
          date: new Date(2021, 2, 12),
@@ -25,6 +24,10 @@ const App = () => {
        },
     ];
 
+const App = () => {
+
+    const [costs, setCosts] = useState(INITIAL_COSTS)
+
   // return React.createElement(
  //  "div",
   //   {},
@@ -33,8 +36,9 @@ const App = () => {
   // );
 
   const addCostHandler = (cost:any) => {
-      console.log(cost);
-      console.log('App Component');
+      setCosts(prevCosts => {
+        return [cost, ...prevCosts]
+      });
   }
 
   return (

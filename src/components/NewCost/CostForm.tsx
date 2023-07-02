@@ -3,9 +3,9 @@ import './CostForm.css';
 
 const CostForm = (props:any) => {
 
-        const [inputName, setInputName] = useState('');
-        const [inputAmount, setInputAmount] = useState('');
-        const [inputDate, setInputDate] = useState('');
+        const [inputName, setInputName] = useState("");
+        const [inputAmount, setInputAmount] = useState("");
+        const [inputDate, setInputDate] = useState("");
 
   //    const [userInput, setUserInput] = useState({
    //     name: '',
@@ -14,7 +14,7 @@ const CostForm = (props:any) => {
    //   });
 
         const nameChangeHandler = (event:any) => {
-            setInputDate(event.target.value);
+            setInputName(event.target.value);
           // setUserInput({
            //     ...userInput,
            //     name: event.target.value
@@ -48,7 +48,7 @@ const CostForm = (props:any) => {
             event.preventDefault();
 
             const costData = {
-             name: inputName,
+             description: inputName,
              amount: inputAmount,
              date: new Date(inputDate)
             };
