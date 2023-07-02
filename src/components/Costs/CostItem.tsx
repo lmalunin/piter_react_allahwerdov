@@ -5,6 +5,7 @@ import Card from '../UI/Card';
 
 const CostItem = (props:any) => {
     return (
+    <li>
     <Card className='cost-item'>
             <CostDate date={props.date}/>
             <div className='cost-item__description'>
@@ -12,7 +13,8 @@ const CostItem = (props:any) => {
               <div className='cost-item__price'>${props.amount}</div>
             </div>
     </Card>
-    );
+    </li>
+   );
 }
 
 export default CostItem;
