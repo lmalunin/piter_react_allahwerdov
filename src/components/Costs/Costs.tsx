@@ -19,6 +19,7 @@ const Costs = (props:any) => {
        onChangeYear={yearChangeHandler}/>
              {props.costs.map((cost:any) => (
               <CostItem
+                key={cost.id}
                 date={cost.date}
                 description={cost.description}
                 amount={cost.amount}
